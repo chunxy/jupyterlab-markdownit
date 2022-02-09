@@ -78,3 +78,8 @@ folder is located. Then you can remove the symlink named `jupyterlab-markdownit`
 ### Packaging the extension
 
 See [RELEASE](RELEASE.md)
+
+
+## Acknowledgement 
+
+Credit must be given to [@agoose77/jupyterlab-markup](https://github.com/agoose77/jupyterlab-markup). Actually this is more of a replica of `jupyterlab-markup`, rearranged with my own flavor.
