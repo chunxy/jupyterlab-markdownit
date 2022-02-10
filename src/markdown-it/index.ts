@@ -25,7 +25,6 @@ const core: JupyterFrontEndPlugin<IMarkdown.IMarkdownManager> = {
     palette: ICommandPalette,
     menu?: IMainMenu
   ) => {
-    alert("RenderedMarkdown loaded!!!!!")
     const { commands, shell } = app;
     const manager = new MarkdownItManager();
     // set the static manager
