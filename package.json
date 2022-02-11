@@ -45,9 +45,9 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.1.0",
-    "@jupyterlab/rendermime-interfaces": "^3.2.8",
-    "@jupyterlab/mainmenu": "^3.2.8",
+    "@jupyterlab/application": "^3.0.0",
+    "@jupyterlab/rendermime-interfaces": "^3.0.0",
+    "@jupyterlab/mainmenu": "^3.0.0",
     "@lumino/widgets": "^1.31.1",
     "markdown-it": "^12.2.3",
     "markdown-it-docutils": "^0.1.1",
