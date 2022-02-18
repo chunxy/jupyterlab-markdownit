@@ -12,7 +12,7 @@ export const task = simpleMarkdownItPlugin(kPackageName, {
     Plugin: 'https://github.com/linsir/markdown-it-task-checkbox'
   },
   examples: {
-    'Tasklists': `
+    Tasklist: `
 - [ ] Mercury
 - [x] Venus
 - [x] Earth (Orbit/Moon)
@@ -22,7 +22,7 @@ export const task = simpleMarkdownItPlugin(kPackageName, {
 - [ ] Uranus
 - [ ] Neptune
 - [ ] Comet Haley
-    `
+`
   },
   plugin: async () => {
     const taskPlugin = await import(

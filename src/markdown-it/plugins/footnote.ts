@@ -12,7 +12,7 @@ export const footnote = simpleMarkdownItPlugin(kPackageName, {
     Plugin: 'https://github.com/markdown-it/markdown-it-footnote'
   },
   examples: {
-    Simple: `
+    'Footnote': `
 Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
@@ -21,7 +21,7 @@ Here is a footnote reference,[^1] and another.[^longnote]
 
   Subsequent paragraphs are indented to show that they
 belong to the previous footnote.
-      `
+`
   },
   plugin: async () => {
     const footnotePlugin = await import(

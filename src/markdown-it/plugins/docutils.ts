@@ -78,7 +78,7 @@ Math:
 :label: math_label
 w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}    
 \`\`\`
-      `
+`
   },
   plugin: async () => {
     const docutilsPlugin = await import(

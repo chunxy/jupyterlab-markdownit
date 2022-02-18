@@ -12,7 +12,7 @@ export const diagrams = simpleMarkdownItPlugin(kPackageName, {
     Plugin: 'https://github.com/valeriangalliat/markdown-it-anchor'
   },
   examples: {
-    Railroad: `
+    'Railroad': `
 \`\`\`railroad
 Diagram(
   Optional('+', 'skip'),
