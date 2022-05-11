@@ -15,7 +15,10 @@ A JupyterLab extension to include markdown-it and its extensions for markdown re
 To install the extension, execute:
 
 ```bash
-pip install jupyterlab_markdownit
+git clone https://github.com/chunxy/jupyterlab-markdownit.git
+pip install -U jupyter-packaging
+cd jupyterlab-markdownit
+pip install .
 ```
 
 ## Uninstall
@@ -23,7 +26,7 @@ pip install jupyterlab_markdownit
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyterlab_markdownit
+pip uninstall jupyterlab-markdownit
 ```
 
 
