@@ -39,7 +39,6 @@ export class RenderedMarkdown extends RenderedHTMLCommon {
     if (this.md == null) {
       this.md = await RenderedMarkdown.markdownItManager.getMarkdownIt(this);
     }
-    console.warn("RenderedMyST loaded!!!!!")
     let markdown = String(model.data[this.mimeType]);
     let text_and_math = removeMath(markdown);
     let text = text_and_math['text'];
