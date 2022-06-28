@@ -1,5 +1,5 @@
 """
-jupyterlab_markdownit setup
+jupyterlab-markdownit setup
 """
 import json
 import sys
@@ -10,7 +10,7 @@ import setuptools
 HERE = Path(__file__).parent.resolve()
 
 # The name of the project
-name = "jupyterlab_markdownit"
+name = "jupyterlab-markdownit"
 
 lab_path = (HERE / name.replace("-", "_") / "labextension")
 
@@ -43,7 +43,6 @@ setup_args = dict(
     version=version,
     url=pkg_json["homepage"],
     author=pkg_json["author"]["name"],
-    author_email=pkg_json["author"]["email"],
     description=pkg_json["description"],
     license=pkg_json["license"],
     license_file="LICENSE",
@@ -79,10 +78,10 @@ try:
         npm_builder,
         get_data_files
     )
-    post_develop = npm_builder(
+    pre_dist = npm_builder(
         build_cmd="install:extension", source_dir="src", build_dir=lab_path
     )
-    setup_args["cmdclass"] = wrap_installers(post_develop=post_develop, ensured_targets=ensured_targets)
+    setup_args["cmdclass"] = wrap_installers(pre_dist=pre_dist, ensured_targets=ensured_targets)
     setup_args["data_files"] = get_data_files(data_files_spec)
 except ImportError as e:
     import logging

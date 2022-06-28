@@ -1,10 +1,15 @@
-# jupyterlab_markdownit
+# jupyterlab-markdownit
 
-[![Github Actions Status](https://github.com/github_username/jupyterlab-markdownit/workflows/Build/badge.svg)](https://github.com/github_username/jupyterlab-markdownit/actions/workflows/build.yml)
+A JupyterLab extension to include [markdown-it](https://github.com/markdown-it/markdown-it) and its extensions for markdown rendering.
 
-A JupyterLab extension to include markdown-it and its extensions for markdown rendering
+Currently supported markdown-it extensions include:
 
+- [markdown-it-docutils](https://github.com/executablebooks/markdown-it-docutils)
+- [markdown-it-diagrams](https://github.com/valeriangalliat/markdown-it-anchor)
+- [markdown-it-task-checkbox](https://github.com/linsir/markdown-it-task-checkbox)
+- [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
 
+- [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
 
 ## Requirements
 
@@ -14,19 +19,8 @@ A JupyterLab extension to include markdown-it and its extensions for markdown re
 
 To install the extension, execute:
 
-```bash
-git clone https://github.com/chunxy/jupyterlab-markdownit.git
-pip install -U jupyter-packaging
-cd jupyterlab-markdownit
-pip install .
-```
-
-## Uninstall
-
-To remove the extension, execute:
-
-```bash
-pip uninstall jupyterlab-markdownit
+```shell
+pip install jupyterlab-markdownit
 ```
 
 
@@ -40,9 +34,11 @@ The `jlpm` command is JupyterLab's pinned version of
 [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
 `yarn` or `npm` in lieu of `jlpm` below.
 
-```bash
+```shell
 # Clone the repo to your local environment
-# Change directory to the jupyterlab_markdownit directory
+git clone https://github.com/chunxy/jupyterlab-markdownit.git
+# Change directory to the jupyterlab-markdownit directory
+cd jupyterlab-markdownit
 # Install package in development mode
 pip install -e .
 # Link your development version of the extension with JupyterLab
@@ -53,7 +49,7 @@ jlpm run build
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
-```bash
+```shell
 # Watch the source directory in one terminal, automatically rebuilding when needed
 jlpm run watch
 # Run JupyterLab in another terminal
@@ -64,19 +60,19 @@ With the watch command running, every saved change will immediately be built loc
 
 By default, the `jlpm run build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
 
-```bash
+```shell
 jupyter lab build --minimize=False
 ```
 
 ### Development uninstall
 
-```bash
+```shell
 pip uninstall jupyterlab_markdownit
 ```
 
-In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+When uninstalling you will also need to remove the symlink created by `jupyter labextension develop . --overwrite`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jupyterlab-markdownit` within that folder.
+folder is located. Then you can remove the symlink named `jupyterlab-markdownit` in that folder.
 
 ### Packaging the extension
 
@@ -85,4 +81,4 @@ See [RELEASE](RELEASE.md)
 
 ## Acknowledgement 
 
-Credit must be given to [@agoose77/jupyterlab-markup](https://github.com/agoose77/jupyterlab-markup). Actually this is more of a replica of `jupyterlab-markup`, rearranged with my own flavor.
+Credit must be given to [@agoose77/jupyterlab-markup](https://github.com/agoose77/jupyterlab-markup). Actually this repo is more of a replica of `jupyterlab-markup`, rearranged with my own flavor.

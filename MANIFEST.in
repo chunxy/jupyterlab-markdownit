@@ -8,6 +8,7 @@ include ts*.json
 include yarn.lock
 
 graft jupyterlab_markdownit/labextension
+graft schema
 
 # Javascript files
 graft src
